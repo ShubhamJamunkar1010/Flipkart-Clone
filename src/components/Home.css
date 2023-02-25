@@ -1,0 +1,40 @@
+.category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    height: 30vh;
+}
+.category div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2vw;
+    margin-top: 10px;
+}
+.sub-category-img > img{
+    height: 10vh;
+}
+.sub-category-img > img:hover{
+    cursor: pointer;
+}
+.sub-category-product span{
+    font-size: 14px;
+    font-weight: 700;
+}
+.sub-category-product span:hover{
+    color:  rgb(59, 59, 198);
+    cursor: pointer;
+}
+
+/* slider */
+.carousel{
+   margin-top: 75px;
+   margin-bottom: 75px;
+   background-color: antiquewhite;
+}
+.carousel-img{
+    display: flex;
+    height: 40vh;
+}
+
