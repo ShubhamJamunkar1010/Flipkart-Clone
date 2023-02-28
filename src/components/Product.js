@@ -48,7 +48,7 @@ const Product = () => {
           </div>
           <div className="right-side">
             <h5>{product.title}</h5>
-            <p style={{width:'80%'}}>{product.description}</p>
+            {/* <p style={{width:'80%'}}>{product.description}</p> */}
             <p className="rate">Rating {product.rating && product.rating.rate}★</p>
             <p style={{fontWeight:'bold'}}>${product.price}</p>
             <p style={{fontWeight:'bold'}}>Available offers</p>

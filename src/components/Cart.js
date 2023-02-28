@@ -46,13 +46,15 @@ const Cart = () => {
                   {product.qty * product.price}
                 </p>
                 <button
-                  className="btn btn-outline-dark me-4"
+                  className="btn me-4" 
+                  style={{border:"3px solid orange"}}
                   onClick={() => handleDel(product)}
                 >
                   <i className="fa fa-minus"></i>
                 </button>
                 <button
-                  className="btn btn-outline-dark"
+                  className="btn"
+                  style={{border:"3px solid orange"}}
                   onClick={() => handleAdd(product)}
                 >
                   <i className="fa fa-plus"></i>
@@ -70,8 +72,9 @@ const Cart = () => {
         <div className="container">
           <div className="row">
             <NavLink
-              to="/checkout"
-              className="btn btn-outline-dark mb-5 w-25 mx-auto"
+              to="/"
+              className="btn mb-5 w-25 mx-auto"
+              style={{backgroundColor:"orange", color:"white", fontWeight:"bold"}}
             >
               Proceed to Checkout
             </NavLink>

@@ -106,17 +106,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <div>
-          <div className="sub-category-img">
-            <img
-              src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/a1140bead6bfd787.png?q=100"
-              alt="FK originls"
-            />
-          </div>
-          <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>FK Originals</HashLink>
-          </div>
-        </div> */}
       </div>
 
       {/* slider */}
