@@ -52,11 +52,11 @@
         height: 42vh;
     }
 }
-/* @media screen and (max-width:502px){
+@media screen and (max-width:502px){
     .category{
         height: 55vh;
     }
-} */
+}
 @media screen and (max-width:1350px){
     .carousel{
         margin-top: 5px;
