@@ -91,3 +91,128 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useRef } from "react";
+// import Home from "./Home";
+// import "./Login.css";
+
+// function Login() {
+//   const email = useRef();
+//   const password = useRef();
+//   const getEmail = localStorage.getItem("emailData");
+//   const getPassword = localStorage.getItem("passwordData");
+//   const handleSubmit = () => {
+//     if (email.current.value == "shubham" && password.current.value == "1027") {
+//       localStorage.setItem("emailData", "shubham");
+//       localStorage.setItem("passwordData", "1027");
+//     }
+//   };
+
+//   return (
+//     <div className="loginPage">
+//       {getEmail && getPassword ? (
+//         <Home />
+//       ) : (
+//         <form className="form" onSubmit={handleSubmit}>
+//           <div>
+//             <h1 style={{ color: "white" }}>Login to Flipcart</h1>
+//           </div>
+//           <div>
+//             <input
+//               className="email"
+//               type="text"
+//               placeholder="enter your email"
+//               ref={email}
+//             />
+//           </div>
+//           <div>
+//             <input
+//               className="pass"
+//               type="password"
+//               placeholder="enter your password"
+//               ref={password}
+//             />
+//           </div>
+
+//           <button className="log-btn">Login</button>
+//         </form>
+//       )}
+//     </div>
+//   );
+// }
+// export default Login;
+
+
+
+
+
+
+// Login.className.loginPage{
+//     display: flex;
+//     flex-direction: column;
+//     height: 100vh;
+//     background-color: rgb(48, 48, 121);
+// }
+// .form{
+//     display: flex;
+//     flex-direction: column;
+//     gap: 5vh;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 20vh;
+// }
+// .log-btn{
+//     background-color: blue;
+//     color: rgb(223, 215, 215);
+//     width: 300px;
+//     padding: 10px;
+//     border: 1px solid blue;
+//     font-weight: bold;
+// }
+// .log-btn:hover{
+//     background-color: rgb(66, 66, 234);
+// }
+// .email{
+//     width: 300px;
+//     padding: 10px;
+// }
+// .pass{
+//     width: 300px;
+//     padding: 10px;
+// }

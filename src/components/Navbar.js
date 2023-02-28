@@ -3,9 +3,12 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { BsCart, BsSearch } from "react-icons/bs";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const state = useSelector((state) => state.handleCart);
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+
   return (
     <>
       <div className="navbar">
@@ -25,20 +28,31 @@ const Navbar = () => {
           />
           <BsSearch color="blue" size={18} style={{ margin: "8px" }} />
         </div>
-        <div className="home">
+        <div className="home resp">
           <NavLink to="/" className="nav-items">
             Home
           </NavLink>
         </div>
-        <div className="products">
+        <div className="products resp">
           <NavLink to="/products" className="nav-items">
             Products
           </NavLink>
         </div>
-        <div className="more">
-          <NavLink className="nav-items">Login</NavLink>
+        
+        <div className="more resp">
+          {isAuthenticated ?(
+            <NavLink to='/'>
+            <button className="nav-items logout-btn" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</button>
+            </NavLink> 
+
+          ):(
+            <NavLink to='/'>
+            <button className="nav-items logout-btn" onClick={() => loginWithRedirect()}>Login</button>
+            </NavLink> 
+          )
+        }
         </div>
-        <div className="cart">
+        <div className="cart resp">
           <div>
             <BsCart size={18} />
           </div>

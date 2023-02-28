@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content:center;
     background-color: rgb(49, 49, 215);
-    height: 10vh;
+    height: 12vh;
     position: sticky;
     top: 0px;
     z-index: 10;
@@ -38,6 +38,7 @@
     text-decoration: none;
     color: white;
     cursor: pointer;
+    font-weight: bold;
 }
 .nav-items:hover{
     color: antiquewhite;
@@ -49,4 +50,28 @@
 }
 .cart div{
     margin: 2px;
+}
+.logout-btn{
+    background-color: rgb(49, 49, 215);
+    border: 1px solid  rgb(49, 49, 215);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+@media screen and (max-width:826px){
+    .resp{
+        display: none;
+    }
+    .input-box{
+        margin-right: 50px;
+    }
+    .logo{
+        margin-left: 4vw;
+        width: 70px;
+    }
+    .navbar{
+        height: 8vh;
+    }
 }

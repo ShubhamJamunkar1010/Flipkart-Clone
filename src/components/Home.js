@@ -2,10 +2,13 @@ import React from "react";
 import "./Home.css";
 import Products from "./Products";
 import Carousel from "react-bootstrap/Carousel";
+import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
+
   return (
     <>
+    
       <div className="category">
         <div>
           <div className="sub-category-img">
@@ -15,7 +18,7 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>Grocery</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>Grocery</HashLink>
           </div>
         </div>
 
@@ -27,7 +30,7 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>Mobiles</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>Mobiles</HashLink>
           </div>
         </div>
 
@@ -39,7 +42,7 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>Fashion</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>Fashion</HashLink>
           </div>
         </div>
 
@@ -51,7 +54,7 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>Electronics</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>Electronics</HashLink>
           </div>
         </div>
 
@@ -63,7 +66,7 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>Furnitures</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>Furnitures</HashLink>
           </div>
         </div>
 
@@ -75,7 +78,7 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>Appliances</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>Appliances</HashLink>
           </div>
         </div>
 
@@ -87,7 +90,7 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>Flight & Hotels</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>Flight & Hotels</HashLink>
           </div>
         </div>
 
@@ -99,11 +102,11 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>Beauty</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>Beauty</HashLink>
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <div className="sub-category-img">
             <img
               src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/a1140bead6bfd787.png?q=100"
@@ -111,13 +114,13 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <span>FK Originals</span>
+            <HashLink className="cat" smooth to="#products" duration={500}>FK Originals</HashLink>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* slider */}
-      <div>
+      <div className="slider">
         <Carousel className="carousel">
           <Carousel.Item>
             <img

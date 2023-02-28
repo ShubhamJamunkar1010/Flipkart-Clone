@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Products.css";
 
+
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState([]);
@@ -24,9 +25,9 @@ const Products = () => {
   const ShowProducts = () => {
     return (
       <>
-        <div className="ProductsHeading">
+        <div className="ProductsHeading" id="products">
           <div className="main-heading">
-            <h1>TRENDING PRODUCTS ON FLIPKART</h1>
+            <h1>TRENDING PRODUCTS <span className="resp">ON FLIPKART</span></h1>
           </div>
           <div className="sub-heading">
             <button onClick={() => setFilter(data)}>All</button>
@@ -49,7 +50,7 @@ const Products = () => {
               <>
                 <div className="product" key={product.id}>
                   <img
-                    className="product-img"
+                    className="product-image"
                     src={product.image}
                     alt=""
                     height={100}

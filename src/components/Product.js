@@ -16,24 +16,29 @@ const Product = () => {
 
   useEffect(() => {
     const getProduct = async () => {
+   
       const response = await fetch(`https://fakestoreapi.com/products/${id}`);
       setProduct(await response.json());
+     
     };
     getProduct();
   }, []);
 
+ 
   const ShowProduct = () => {
     return (
       <>
         <div className="productDetails">
           <div className="left-side">
-            <div>
-              <img src={product.image} height={300} alt="" />
+            <div className="product-img">
+              <img src={product.image} alt="" />
             </div>
             <div className="btns">
-              <button className="addToCart" onClick={() => addProduct(product)}>
+            
+                <button className="addToCart" onClick={() => addProduct(product)}>
                 Add to Cart
-              </button>
+                </button> 
+              
               <button className="buyNow">
                 <NavLink className="cart-btn" to="/cart">
                   Go to Cart
@@ -43,12 +48,10 @@ const Product = () => {
           </div>
           <div className="right-side">
             <h5>{product.title}</h5>
-            <p style={{ width: "80%" }}>{product.description}</p>
-            <p className="rate">
-              Rating {product.rating && product.rating.rate}★
-            </p>
-            <p style={{ fontWeight: "bold" }}>${product.price}</p>
-            <p style={{ fontWeight: "bold" }}>Available offers</p>
+            <p style={{width:'80%'}}>{product.description}</p>
+            <p className="rate">Rating {product.rating && product.rating.rate}★</p>
+            <p style={{fontWeight:'bold'}}>${product.price}</p>
+            <p style={{fontWeight:'bold'}}>Available offers</p>
             <p>
               <img
                 src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
@@ -104,9 +107,10 @@ const Product = () => {
   };
 
   return (
-    <div>
-      <ShowProduct />
-    </div>
+        <div>
+          {/* {loading ? <Loading /> : <ShowProduct />} */}
+          <ShowProduct />
+        </div>
   );
 };
 
