@@ -32,11 +32,11 @@
     font-weight: 500;
 }
 .addToCart:hover{
-    background-color: rgb(249, 179, 48);
+    background-color: rgb(194, 153, 78);
     color: white;
 }
 .buyNow:hover{
-    background-color: rgb(250, 101, 47);
+    background-color: rgb(200, 84, 42);
 }
 .buyNow{
     width: 200px;

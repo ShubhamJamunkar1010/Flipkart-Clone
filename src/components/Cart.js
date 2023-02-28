@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { addCart, delCart } from "../redux/action";
+import './Cart.css';
+
 
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
@@ -13,74 +15,59 @@ const Cart = () => {
   const handleDel = (item) => {
     dispatch(delCart(item));
   };
-
   const emptyCart = () => {
     return (
-      <div className="px-4 my-5 bg-light rounded-3 py-5">
-        <div className="container py-4">
-          <div className="row">
+     
             <h3>Your Cart is Empty</h3>
-          </div>
-        </div>
-      </div>
+          
     );
   };
   const cartItems = (product) => {
     return (
-      <>
-        <div className="px-4 my-5 bg-light rounded-3 py-5">
-          <div className="container py-4">
-            <div className="row justify-content-center">
-              <div className="col-md-4">
-                <img
+      <div>
+      <div className="cart-products">
+      <div className="p-image">
+      <img
                   src={product.image}
                   alt={product.title}
                   height="200px"
                   width="180px"
                 />
-              </div>
-              <div className="col-md-4">
-                <h3>{product.title}</h3>
-                <p className="lead fw-bold">
+        </div>
+        <div className="p-details">
+                <h3 className="p-title">{product.title}</h3>
+                <p className="p-price">
                   {product.qty} X ${product.price} = $
                   {product.qty * product.price}
                 </p>
                 <button
-                  className="btn me-4" 
-                  style={{border:"3px solid orange"}}
+                className="p-btn1"
                   onClick={() => handleDel(product)}
                 >
                   <i className="fa fa-minus"></i>
                 </button>
                 <button
-                  className="btn"
-                  style={{border:"3px solid orange"}}
+                className="p-btn2"
                   onClick={() => handleAdd(product)}
                 >
                   <i className="fa fa-plus"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
+                </button>  
+      </div>
+      </div>       
+      </div>
+      
     );
   };
   const buttons = () => {
     return (
-      <>
-        <div className="container">
-          <div className="row">
+      <div className="C-btn">
             <NavLink
-              to="/"
-              className="btn mb-5 w-25 mx-auto"
-              style={{backgroundColor:"orange", color:"white", fontWeight:"bold"}}
+              to="/checkout"
+              className="checkout-btn"
             >
               Proceed to Checkout
             </NavLink>
-          </div>
-        </div>
-      </>
+      </div>
     );
   };
 

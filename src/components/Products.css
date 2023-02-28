@@ -79,31 +79,29 @@
     margin-top: 10px;
 }
 .product-btn{
-    background-color: orange;
     padding: 4px;
-    border: 1px solid orange;
+    border: 3px solid orange;
     outline: none;
     width: 200px;
     border-radius: 8px;
     margin-top: 10px;
-    background-color: orange;
+    background-color: antiquewhite;
     
 }
 .P-btn{
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 .P-btn:hover{
-    background-color: blue;
-    border: 1px solid blue;
-    color: white;
+    background-color: orange;
+    border: 1px solid orange;
+    color: black;
 }
 .product-btn:hover{
-    background-color: blue;
-    border: 1px solid blue;
-    color: white;
+    background-color: orange;
+    border: 1px solid orange;
 }
 @media screen and (max-width:572px){
     .ProductsHeading{
