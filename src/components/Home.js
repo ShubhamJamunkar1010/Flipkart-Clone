@@ -5,10 +5,8 @@ import Carousel from "react-bootstrap/Carousel";
 import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
-
   return (
     <>
-    
       <div className="category">
         <div>
           <div className="sub-category-img">
@@ -18,7 +16,9 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>Grocery</HashLink>
+            <HashLink className="cat" smooth to="#products" duration={500}>
+              Grocery
+            </HashLink>
           </div>
         </div>
 
@@ -30,7 +30,9 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>Mobiles</HashLink>
+            <HashLink className="cat" smooth to="#products" duration={500}>
+              Mobiles
+            </HashLink>
           </div>
         </div>
 
@@ -42,7 +44,9 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>Fashion</HashLink>
+            <HashLink className="cat" smooth to="#products" duration={500}>
+              Fashion
+            </HashLink>
           </div>
         </div>
 
@@ -54,7 +58,9 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>Electronics</HashLink>
+            <HashLink className="cat" smooth to="#products" duration={500}>
+              Electronics
+            </HashLink>
           </div>
         </div>
 
@@ -66,7 +72,9 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>Furnitures</HashLink>
+            <HashLink className="cat" smooth to="#products" duration={500}>
+              Furnitures
+            </HashLink>
           </div>
         </div>
 
@@ -78,7 +86,9 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>Appliances</HashLink>
+            <HashLink className="cat" smooth to="#products" duration={500}>
+              Appliances
+            </HashLink>
           </div>
         </div>
 
@@ -90,7 +100,9 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>Flight & Hotels</HashLink>
+            <HashLink className="cat" smooth to="#products" duration={500}>
+              Flight & Hotels
+            </HashLink>
           </div>
         </div>
 
@@ -102,10 +114,11 @@ const Home = () => {
             />
           </div>
           <div className="sub-category-product">
-            <HashLink className="cat" smooth to="#products" duration={500}>Beauty</HashLink>
+            <HashLink className="cat" smooth to="#products" duration={500}>
+              Beauty
+            </HashLink>
           </div>
         </div>
-
       </div>
 
       {/* slider */}

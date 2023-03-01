@@ -38,19 +38,29 @@ const Navbar = () => {
             Products
           </NavLink>
         </div>
-        
-        <div className="more resp">
-          {isAuthenticated ?(
-            <NavLink to='/'>
-            <button className="nav-items logout-btn" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</button>
-            </NavLink> 
 
-          ):(
-            <NavLink to='/'>
-            <button className="nav-items logout-btn" onClick={() => loginWithRedirect()}>Login</button>
-            </NavLink> 
-          )
-        }
+        <div className="more resp">
+          {isAuthenticated ? (
+            <NavLink to="/">
+              <button
+                className="nav-items logout-btn"
+                onClick={() =>
+                  logout({ logoutParams: { returnTo: window.location.origin } })
+                }
+              >
+                Logout
+              </button>
+            </NavLink>
+          ) : (
+            <NavLink to="/">
+              <button
+                className="nav-items logout-btn"
+                onClick={() => loginWithRedirect()}
+              >
+                Login
+              </button>
+            </NavLink>
+          )}
         </div>
         <div className="cart resp">
           <div>
