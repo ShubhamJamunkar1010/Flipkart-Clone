@@ -27,3 +27,12 @@
     background-color: orange;
     color: white;
 }
+@media screen and (max-width:650px){
+    .order{
+        font-size: 23px;
+    }
+    .go-btn{
+        font-size: 22px;
+        padding: 4px;
+    }
+}
