@@ -7,7 +7,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const state = useSelector((state) => state.handleCart);
-  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
   return (
     <>

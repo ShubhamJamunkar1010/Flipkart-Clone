@@ -39,9 +39,9 @@ export const Checkout = () => {
           <h3 style={{fontWeight:'bold'}}>PAYMENT</h3>
           <form style={{fontWeight:'bold'}}>
             Accepted Card <br />
-            <img src="https://cdn.imgbin.com/24/18/7/imgbin-debit-card-bank-of-america-credit-card-visa-corporate-business-card-s6hG5thjNvaEdHB7EtvmvTkx0.jpg" width="50" />
-			<img src="https://www.pngplay.com/wp-content/uploads/7/Debit-Card-Transparent-Image.png" width="50" />
-            <img src="https://png.pngitem.com/pimgs/s/194-1948488_image-union-bank-atm-card-hd-png-download.png" width="50" />
+            <img src="https://cdn.imgbin.com/24/18/7/imgbin-debit-card-bank-of-america-credit-card-visa-corporate-business-card-s6hG5thjNvaEdHB7EtvmvTkx0.jpg" alt="img" width="50" />
+			<img src="https://www.pngplay.com/wp-content/uploads/7/Debit-Card-Transparent-Image.png" alt="img" width="50" />
+            <img src="https://png.pngitem.com/pimgs/s/194-1948488_image-union-bank-atm-card-hd-png-download.png" alt="img" width="50" />
             <br />
             <br />
             Credit card number <br />
