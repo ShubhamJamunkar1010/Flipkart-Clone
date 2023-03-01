@@ -7,6 +7,7 @@ import Product from './components/Product';
 import Cart from "./components/Cart";
 import Navbar from './components/Navbar';
 import { Checkout } from './components/Checkout';
+import { OrderPlaced } from './components/OrderPlaced';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route  path="/products/:id" element={<Product/>}/>
         <Route  path="/cart" element={<Cart/>} />
         <Route  path="/checkout" element={<Checkout/>} />
+        <Route  path="/orderPlaced" element={<OrderPlaced/>} />
+        <Route  path="/home" element={<Home/>} />
       </Routes>
     
     </div>

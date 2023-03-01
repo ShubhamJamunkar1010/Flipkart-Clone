@@ -1,5 +1,5 @@
 /* productHeading */
-
+*{padding:0; margin:0; box-sizing: border-box; }
 .ProductsHeading{
     display: flex;
     flex-direction: column;
@@ -14,8 +14,8 @@
     margin: 12px;
     border: 2px solid orange;
     padding: 4px;
-    border-radius: 10px;
-    font-weight: 500;
+    border-radius: 8px;
+    font-weight: bold;
     margin-bottom: 20px;
     background-color: antiquewhite;
 }
@@ -86,7 +86,6 @@
     border-radius: 8px;
     margin-top: 10px;
     background-color: antiquewhite;
-    
 }
 .P-btn{
     list-style: none;
