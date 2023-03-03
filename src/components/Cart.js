@@ -3,11 +3,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { addCart, delCart } from "../redux/action";
 import './Cart.css';
-
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
   const dispatch = useDispatch();
+  let GrandTotal = 0;
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+  
 
   const handleAdd = (item) => {
     dispatch(addCart(item));
@@ -17,12 +20,12 @@ const Cart = () => {
   };
   const emptyCart = () => {
     return (
-     
-            <h3>Your Cart is Empty</h3>
-          
+            <h3 className="emptyCart">Your Cart is Empty</h3>
     );
   };
+  
   const cartItems = (product) => {
+     GrandTotal += product.qty * product.price
     return (
       <div>
       <div className="cart-products">
@@ -37,8 +40,7 @@ const Cart = () => {
         <div className="p-details">
                 <h3 className="p-title">{product.title}</h3>
                 <p className="p-price">
-                  {product.qty} X ${product.price} = $
-                  {product.qty * product.price}
+                  {product.qty} X ${product.price} = ${(product.qty * product.price).toFixed(2)}
                 </p>
                 <button
                 className="p-btn1"
@@ -53,21 +55,38 @@ const Cart = () => {
                   <i className="fa fa-plus"></i>
                 </button>  
       </div>
-      </div>       
+      </div> 
       </div>
       
     );
   };
+  
   const buttons = () => {
     return (
-      <div className="C-btn">
-            <NavLink
-              to="/checkout"
-              className="checkout-btn"
-            >
-              Proceed to Checkout
-            </NavLink>
+      <>
+      <div>
+        Total = ${GrandTotal.toFixed(2)}
       </div>
+
+      <div className="C-btn">
+        {isAuthenticated ?(
+         <NavLink
+         to="/checkout"
+         className="checkout-btn"
+       >
+         Proceed to Checkout
+       </NavLink>
+        ):(
+            <div className="checkout-btn"
+            onClick={() => loginWithRedirect()}
+              >
+              Proceed to Checkout
+            </div>
+        )
+       }
+           
+      </div>
+      </>
     );
   };
 

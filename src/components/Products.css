@@ -1,5 +1,6 @@
 /* productHeading */
 *{padding:0; margin:0; box-sizing: border-box; }
+
 .ProductsHeading{
     display: flex;
     flex-direction: column;
@@ -44,8 +45,9 @@
 }
 .product:hover{
     cursor: pointer;
-    transform:scale(1.05);
-    
+    transform:scale(1.1);
+    transition-duration: 1.1s;
+    transition-timing-function: linear;
 }
 .product-image{
     height: 200px;
@@ -96,11 +98,12 @@
 .P-btn:hover{
     background-color: orange;
     border: 1px solid orange;
-    color: black;
+    color: white;
 }
 .product-btn:hover{
     background-color: orange;
     border: 1px solid orange;
+    color: white;
 }
 @media screen and (max-width:572px){
     .ProductsHeading{

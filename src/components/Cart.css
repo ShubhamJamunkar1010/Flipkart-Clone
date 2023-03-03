@@ -5,10 +5,17 @@
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     background-color:antiquewhite;
     padding: 30px;
     
+}
+.emptyCart{
+    margin-left: 40%;
+    margin-top: 15%;
+    font-size: 45px;
+    font-weight: bold;
+    color: orange;
 }
 .p-title{
     font-size:30px;
@@ -58,6 +65,8 @@ button {
     color: black;
     border-radius: 8px;
     border: 3px solid orange; 
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 .checkout-btn:hover{
     background-color: orange;

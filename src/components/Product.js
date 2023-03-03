@@ -8,6 +8,7 @@ import "./Product.css";
 const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
+ 
 
   const dispatch = useDispatch();
   const addProduct = (product) => {
@@ -16,7 +17,6 @@ const Product = () => {
 
   useEffect(() => {
     const getProduct = async () => {
-   
       const response = await fetch(`https://fakestoreapi.com/products/${id}`);
       setProduct(await response.json());
      
@@ -48,7 +48,6 @@ const Product = () => {
           </div>
           <div className="right-side">
             <h5>{product.title}</h5>
-            {/* <p style={{width:'80%'}}>{product.description}</p> */}
             <p className="rate">Rating {product.rating && product.rating.rate}★</p>
             <p style={{fontWeight:'bold'}}>${product.price}</p>
             <p style={{fontWeight:'bold'}}>Available offers</p>
