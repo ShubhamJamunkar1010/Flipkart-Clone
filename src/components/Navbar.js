@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { BsCart, BsSearch } from "react-icons/bs";
+import { CgMenu, CgCloseR } from "react-icons/cg";
 import { useAuth0 } from "@auth0/auth0-react";
+
+
 
 const Navbar = () => {
   const state = useSelector((state) => state.handleCart);
   const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+  const {isMobile, setIsMobile} = useState(false);
 
   return (
     <>
@@ -70,6 +74,12 @@ const Navbar = () => {
             Cart ({state.length})
           </NavLink>
         </div>
+
+       <div className="mobile-navbar-btn"> 
+        <CgMenu name="menu-outline" className="mobile-nav-icon"/>
+        <CgCloseR name="close-outline" className="close-outline mobile-nav-icon"/>
+       </div>
+
       </div>
     </>
   );

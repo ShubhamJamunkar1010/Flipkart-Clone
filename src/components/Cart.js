@@ -8,8 +8,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
   const dispatch = useDispatch();
-  let GrandTotal = 0;
-  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+  const { loginWithRedirect, isAuthenticated} = useAuth0();
+  let GST=0;
   
 
   const handleAdd = (item) => {
@@ -25,7 +25,6 @@ const Cart = () => {
   };
   
   const cartItems = (product) => {
-     GrandTotal += product.qty * product.price
     return (
       <div>
       <div className="cart-products">
@@ -40,7 +39,9 @@ const Cart = () => {
         <div className="p-details">
                 <h3 className="p-title">{product.title}</h3>
                 <p className="p-price">
-                  {product.qty} X ${product.price} = ${(product.qty * product.price).toFixed(2)}
+                  {product.qty} X ${product.price} = ${(product.qty * product.price)}
+                  <p>GST = {(product.qty * product.price)/15} </p>
+                  <p>Total = ${((product.qty * product.price) + (product.qty * product.price)/15).toFixed(2)} </p>
                 </p>
                 <button
                 className="p-btn1"
@@ -64,10 +65,6 @@ const Cart = () => {
   const buttons = () => {
     return (
       <>
-      <div>
-        Total = ${GrandTotal.toFixed(2)}
-      </div>
-
       <div className="C-btn">
         {isAuthenticated ?(
          <NavLink

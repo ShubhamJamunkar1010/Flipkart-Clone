@@ -10,7 +10,6 @@ const Products = () => {
   useEffect(() => {
     const getproducts = async () => {
       const response = await fetch("https://fakestoreapi.com/products");
-
       setData(await response.clone().json());
       setFilter(await response.json());
     };

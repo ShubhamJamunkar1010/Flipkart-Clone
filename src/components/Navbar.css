@@ -66,7 +66,8 @@
         display: none;
     }
     .input-box{
-        margin-right: 50px;
+        margin-right: 0px;
+        
     }
     .logo{
         margin-left: 4vw;
@@ -74,5 +75,26 @@
     }
     .navbar{
         height: 8vh;
+    }
+}
+
+.mobile-navbar-btn{
+    display: none;
+}
+.close-outline{
+    display:none;
+  }
+.mobile-navbar-btn[name="close-outline"]{
+    display: none;
+} 
+@media screen and (max-width:840px){
+    .mobile-navbar-btn{
+        display: inline-block;
+        margin-right: 25px;
+        z-index: 999;
+        cursor: pointer;
+    }
+    .mobile-nav-icon{
+        font-size: 25px;
     }
 }
