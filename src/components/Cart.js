@@ -35,8 +35,8 @@ const Cart = () => {
           <div className="p-details">
             <h3 className="p-title">{product.title}</h3>
             <p className="p-price">
-              {product.qty} X ${product.price} = ${product.qty * product.price}
-              <p>GST = {(product.qty * product.price) / 15} </p>
+              {product.qty} X ${product.price} = ${(product.qty * product.price).toFixed(2)}
+              <p>GST = {((product.qty * product.price) / 15).toFixed(2)} </p>
               <p>
                 Total = $
                 {(

@@ -11,11 +11,12 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
   const state = useSelector((state) => state.handleCart);
   const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
-  const {isMobile, setIsMobile} = useState(false);
+
+  const {menuIcon, setMenuIcon} = useState();
 
   return (
     <>
-      <div className="navbar">
+      <div className={menuIcon ? "navbar active" : "navbar"}>
         <div>
           <NavLink to="/" className="logo">
             <img
@@ -76,8 +77,16 @@ const Navbar = () => {
         </div>
 
        <div className="mobile-navbar-btn"> 
-        <CgMenu name="menu-outline" className="mobile-nav-icon"/>
-        <CgCloseR name="close-outline" className="close-outline mobile-nav-icon"/>
+        <CgMenu 
+        name="menu-outline"
+        className="mobile-nav-icon"
+        onClick={()=>setMenuIcon(true)}
+        />
+        <CgCloseR 
+        name="close-outline" 
+        className="close-outline mobile-nav-icon"
+        onClick={()=>setMenuIcon(false)}
+        />
        </div>
 
       </div>
